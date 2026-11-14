@@ -210,6 +210,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
         const SizedBox(height: 8),
         for (final feed in _feeds)
           Padding(
+            key: ValueKey(feed.sensor.id),
             padding: const EdgeInsets.only(bottom: 8),
             child: SensorCard(
               feed: feed,
